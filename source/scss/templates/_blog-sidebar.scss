@@ -1,0 +1,28 @@
+.sidebar-wrap {
+   @include desktop {
+      margin-top: 40px;
+      padding-top: 60px;
+      border-top: 1px solid #ddd;
+   }
+}
+
+.sidebar-widget {
+   &.categories {
+      ul li {
+         margin-bottom: 15px;
+      }
+   }
+
+   &.search {
+      position: relative;
+      background: #f7f9f3;
+
+      a {
+         position: absolute;
+         display: inline-block;
+         right: 30px;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+   }
+}

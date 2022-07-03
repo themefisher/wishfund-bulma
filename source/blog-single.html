@@ -1,0 +1,24 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "A place where start new life with peace",
+"description": "News details"
+})
+
+
+<section class="section blog-wrap">
+    <div class="container">
+        <div class="columns is-multiline is-desktop">
+            <div class="column is-8-desktop">
+                @@include('blocks/single-blog.htm')
+            </div>
+            <div class="column is-4-desktop">
+                @@include('blocks/post-sidebar.htm')
+            </div>   
+        </div>
+    </div>
+</section>
+
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')

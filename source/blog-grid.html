@@ -1,0 +1,28 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "Blog articles",
+"description": "Our blog"
+})
+
+<section class="section blog-wrap">
+    <div class="container">
+        @@include('blocks/blog-posts.htm')
+
+        <div class="columns mt-5">
+            <div class="column is-12">
+            	<nav class="pagination is-justify-content-center">
+                    <div class="nav-links">
+                        <a class="page-numbers current" href="#">1</a>
+                        <a class="page-numbers" href="#">2</a>
+                        <a class="page-numbers" href="#">3</a>
+                        <a class="page-numbers" href="#"><i class="icofont-long-arrow-right"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')

@@ -1,0 +1,220 @@
+#navbar {
+   @include desktop {
+      padding: 8px 0;
+      .navbar-menu {
+         padding: 1rem 0;
+      }
+   }
+
+   .navbar-burger {
+      border: 0;
+      margin-top: 11px;
+      color: #fff;
+      background-color: $primary-color;
+      outline: 0;
+      height: 2.8rem;
+      width: 2.8rem;
+      span {
+         left: calc(49% - 7px);
+         &:nth-child(1) {top:calc(50% - 5px)}
+         &:nth-child(2) {top:50%}
+         &:nth-child(3) {top:calc(50% + 5px)}
+      }
+      &.is-active {
+         background-color: #282b40;
+      }
+  }
+
+   li.navbar-item {
+      padding: 0;
+      &:last-child .navbar-link {
+         padding-right: 0;
+         @include desktop {
+            margin-right: 17px !important;
+         }
+      }
+   }
+
+   .navbar-link {
+      font-family: $secondary-font;
+      color: $black;
+      background-color: transparent !important;
+      text-transform: capitalize;
+      font-weight: 600;
+      padding: 30px 17px;
+      transition: all .25s ease;
+      @include large-desktop {
+         padding: 30px 14px;
+         font-size: 15px;
+      }
+      @include desktop {
+         padding: 10px 14px;
+         text-align: center;
+      }
+
+      &:hover,
+      &:focus {
+         color: $primary-color;
+      }
+   }
+   .btn {
+      &:hover {
+         color: $light;
+      }
+
+   }
+
+}
+
+.header-top {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+   font-size: 14px;
+   @include desktop {
+      padding: 6px 0;
+   }
+
+   .top-btn {
+      padding: 14px 25px;
+      background: $primary-color;
+      line-height: 40px;
+      color: $light;
+      @include mobile-xs {
+         padding: 8px 13px;
+         font-size: 11px;
+         display: block;
+         line-height: unset;
+         margin-left: 0 !important;
+         margin-top: 10px !important;
+      }
+
+      &:hover {
+         background: $secondary-color;
+      }
+   }
+
+   .header-top-right {
+      a {
+         margin: 0 10px;
+
+         &:first-child {
+            margin-left: 0;
+            @include mobile-xs {
+               margin-left: 10px;
+            }
+         }
+
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   }
+
+   .header-top-info {
+      a {
+         margin-right: 20px;
+         color: #000;
+         @include mobile-xs {
+            display: block;
+            margin-right: 0 !important;
+         }
+
+         i {
+            color: $primary-color;
+         }
+      }
+   }
+
+   .btn {
+      font-size: 12px !important;
+      margin-right: 0px;
+   }
+}
+
+
+.navbar-brand {
+   img {
+      max-height: 50px;
+   }
+   @include desktop {
+      .navbar-item {
+         padding-left: 0;
+      }
+   }
+}
+
+.navbar-dropdown {
+   visibility: hidden;
+   opacity: 0;
+   transition: all .2s ease-in, visibility 0s linear .2s, transform .2s linear;
+   width: 220px;
+   padding: 0px;
+   border-radius: 0px;
+   display: block;
+   border: 0;
+   z-index: -1;
+   &.align-right {
+      left: auto;
+      right: -34px;
+   }
+   @include desktop {
+      display: none;
+      visibility: visible;
+      opacity: 1;
+      margin: auto;
+      text-align: center;
+      background: #f5f5f5;
+      width: 250px;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      border-bottom: 0;
+   }
+}
+
+.navbar-link::after {
+   display: none !important;
+}
+
+.has-dropdown:hover .navbar-dropdown {
+   visibility: visible;
+   transition: all .45s ease 0s;
+   opacity: 1;
+   z-index: 3;
+}
+
+.navbar-dropdown .navbar-item {
+   padding: .8rem 1.5rem;
+   font-size: 14px;
+   font-weight: 600;
+   color: rgba(0, 0, 0, 0.7);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+   &:hover {
+      background: $primary-color !important;
+      color: $light !important;
+   }
+   @include desktop {
+      padding: .6rem 1.5rem;
+   }
+}
+
+@include tablet {
+   .header-top .header-top-info a:last-child {
+      margin-right: 0px;
+   }
+
+   .header-top .header-top-info {
+      padding: 10px 0px;
+   }
+
+   .header-top-right {
+      margin-bottom: 12px;
+   }
+   
+   .dropdown-menu {
+      display: none;
+      width: 100%;
+      text-align: center;
+   }
+
+   #navbar .nav-link {
+      padding: 15px 10px;
+   }
+}
