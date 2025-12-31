@@ -1,6 +1,6 @@
 # Wishfund Free Bulma Agency Template
 
-![wishfund](https://demo.themefisher.com/thumbnails/wishfund.png)
+![wishfund](https://assets.teamosis.com/thumbs/wishfund.png)
 
 👉🏻[View Live Preview](https://demo.themefisher.com/wishfund-bulma/)
 
